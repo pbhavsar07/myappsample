@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script type="text/javascript" src="final.js" ></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        
+    </head>
+    <body>
+        <br>
+        <script type="text/javascript" src="final.js" ></script>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-sm-4 col-xs-ofsfset-2">
+                    <input 
+                    type="radio" 
+                    id="other" 
+                    value="other" 
+                    onclick="gettemplate()">My Template..
+
+                    &nbsp&nbsp&nbsp<button class="btn btn-primary" onclick="aboutus()" >about</button>
+                    <div><br>
+                     <textarea id="texta" rows="20" cols="80" 
+                     onkeydown="if (event.keyCode == 13) document.getElementById('edittemplate').click()"  >interface $INT1$
+service instance $SERVICE_INSTANCE1$ ethernet
+description CSI: $SHORT_NAME$-$FRO_NUM$
+!
+interface $INT2$
+service instance $SERVICE_INSTANCE2$ ethernet
+description CSI: $SHORT_NAME$-$FRO_NUM$
+!
+connect FRO$FRO_NUM$ $INT1$ $SERVICE_INSTANCE1$ $INT2$ $SERVICE_INSTANCE2$
+end
+                            
+                          </textarea>
+                     </div>
+                     <br>
+                    <button id="edittemplate" class="btn btn-success" onclick="ValidateTemplate()">Edit Template</button> 
+                    <button id="cleartemplate" class="btn btn-danger" onclick="clearthis()">Clear</button>
+
+                    <div id="message"><br>
+                         please insert Wiki Template in above box
+                    </div>
+
+                    <div>
+                        <input type="text" id="value" name="value" style="visibility:hidden"
+                        onkeydown="if(event.keyCode == 13) document.getElementById('enter').click()">
+                        <button class="btn btn-primary" id="enter" onclick="Replacevalue()" style="visibility:hidden" >Enter</button>
+                        <button class="btn btn-primary" id="skip"  onclick="onskip()" style="visibility:hidden">Skip</button>
+                        
+                    </div>
+
+                    <div>
+                        <input type="text" id="temp" name="temp" style="visibility:hidden">
+                        <input type="text" id="flag" name="flag" value="0" style="visibility:hidden"></p>                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
+        <!-- Use downloaded version of Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

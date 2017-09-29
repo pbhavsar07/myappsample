@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Wiki Template Editor</title>  
+<script type="text/javascript" src="akash.js" ></script>
+</head>
+<body>
+<input style="margin-left: 605px" type="button" value="About" onclick="window.location.href='about.html'"> <br>
+
+         
+ <form action="">
+  &nbsp; &nbsp; &nbsp;
+  <input type="radio"
+         name="type" 
+         value="ESP" 
+         onclick="clickESP()" 
+         id="radioESP"> ESP NID Template
+   &nbsp; &nbsp;
+  <input type="radio" 
+        name="type" value="PR" 
+        onclick="clickPR()" id="radioPR"> PR NID Template
+  &nbsp;  &nbsp; 
+
+  <input type="radio" 
+        name="type" 
+        value="other" 
+        checked = "checked" 
+        onclick="clickOther()" 
+        id="radioOther"> Other Template
+</form>
+<br>
+
+<textarea  rows="20" cols="80" id="tarea"  name="textarea" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('editTemplate').click()"  autofocus>
+</textarea><br><!-- 13 is enter key -->
+<br>
+
+      <input type="button"  id="editTemplate" value="Edit Template" onclick="validateTemplate();" autofocus>   
+      <input style="margin-left: 442px" type="button" value="Clear Template" onclick="clearcode()">
+</div>
+<br>
+<br>
+<div id="message" style="margin-left: 140px" > Please paste  WiKi template in above box...
+</div> 
+<br>
+<input type="text" id="value" name="value" style="margin-left: 240px; visibility:hidden"  onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('enter').click()" />
+ <br>
+ <br> 
+<input type="button"  id="enter" value="Enter"  onclick="replaceValue()" style="margin-left: 380px; display:none"/> <br>
+<input style="margin-left: 386px; display:none" type="button"  id="next" value="Skip"  onclick="skip()" /> 
+
+<input type="text" id="temp" name="Temp" style="visibility:hidden">
+<input type="text" id="flag" name="Flag" value="0" style="visibility:hidden"> 
+
+<br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
